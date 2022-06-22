@@ -2,6 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import MainScreen from "./src/pages/MainScreen";
+import COLORS from "./src/assets/colors";
 // import Episode from "./src/pages/Episode";
 // import Character from "./src/pages/Character";
 
@@ -16,7 +17,7 @@ const App = () => {
           component={MainScreen}
           options={{
             title: "Rick And Morty",
-            headerStyle: { backgroundColor: "#64b5f6" },
+            headerStyle: { backgroundColor: COLORS.primary },
             headerTitleStyle: { color: "white" },
             headerTintColor:"white"
           }}

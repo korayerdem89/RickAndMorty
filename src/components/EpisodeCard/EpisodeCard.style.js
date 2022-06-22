@@ -1,20 +1,25 @@
-import { StyleSheet } from "react-native";
-
+import { StyleSheet, Dimensions } from "react-native";
+const deviceSize = Dimensions.get("window");
+import COLORS from "../../assets/colors";
 export default StyleSheet.create({
   container: {
-    backgroundColor:'#e0e0e0',
-    borderColor:"#bdbdbd",
-    borderWidth:1,
-    margin:10,
-    flexDirection:'row'
+    backgroundColor: COLORS.primarysoft,
+    margin: 5,
+    flexDirection: "row",
+    borderRadius: 5,
+    flexDirection: "column",
+    alignItems:"center",
+    justifyContent: 'center',
   },
-  title: {
-    fontWeight:"bold",
-    fontSize:18,
+  element: {
+    flexDirection: "row",
+
   },
-  price: {
-    textAlign:'right',
-    fontSize:16,
-    fontStyle:'italic'
+  type: {
+    marginHorizontal: 5,
+  },
+  name: {
+ fontWeight:"bold",
+ fontSize:20
   },
 });

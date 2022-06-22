@@ -6,8 +6,17 @@ const EpisodeCard = ({ item, onSelect }) => {
   return (
     <TouchableWithoutFeedback onPress={onSelect}>
       <View style={styles.container}>
-          <Text style={styles.name}>{item.id}</Text>
-          <Text style={styles.air_date}>{item.name}</Text>
+        <View style={styles.element}>
+        <Text style={styles.name}>{item.name}</Text>
+          </View>
+         <View style={styles.element}>
+         <Text style={styles.type}>Name:</Text>
+         <Text style={styles.id}>{item.id}</Text>
+         </View>
+         <View style={styles.element}>
+         <Text style={styles.type}>Name:</Text>
+         <Text style={styles.id}>{item.id}</Text>
+         </View>
       </View>
     </TouchableWithoutFeedback>
   );
