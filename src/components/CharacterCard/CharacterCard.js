@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, TouchableWithoutFeedback } from "react-native";
-import styles from "./EpisodeCard.style";
+import styles from "./CharacterCard.style";
 
-const EpisodeCard = ({ item, onSelect }) => {
+const CharacterCard = ({ item, onSelect }) => {
   const seasonAndEpisode = item.episode;
   const season = seasonAndEpisode.toString().slice(2, 3);
-  const episode = seasonAndEpisode.toString().slice(4, 6);
+  let episode = seasonAndEpisode.toString().slice(4, 6);
   
 
   return (
@@ -25,4 +25,4 @@ const EpisodeCard = ({ item, onSelect }) => {
   );
 };
 
-export default EpisodeCard;
+export default CharacterCard;
