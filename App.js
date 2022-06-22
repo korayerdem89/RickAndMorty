@@ -1,20 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import MainScreen from "./src/pages/MainScreen";
+import Episode from "./src/pages/Episode";
+import Character from "./src/pages/Character";
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
+        <Stack.Screen
+          name="MainScreen"
+          component={MainScreen}
+          options={{
+            title: "Rick And Morty",
+            headerStyle: { backgroundColor: "#64b5f6" },
+            headerTitleStyle: { color: "white" },
+            headerTintColor:"white"
+          }}
+        />
+        <Stack.Screen
+          options={{
+            title: "Episode",
+            headerStyle: { backgroundColor: "#64b5f6" },
+            headerTitleStyle: { color: "white" },
+            headerTintColor:"white"
+          }}
+          name="Episode"
+          component={Episode}
+        />
+        <Stack.Screen
+          options={{
+            title: "Character",
+            headerStyle: { backgroundColor: "#64b5f6" },
+            headerTitleStyle: { color: "white" },
+            headerTintColor:"white"
+          }}
+          name="Character"
+          component={Character}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
