@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { SafeAreaView, Text, FlatList, ActivityIndicator } from "react-native";
 import Config from "../../../config";
 import useFetch from "../../hooks/useFetch/useFetch";
+import EpisodeCard from "../../components/EpisodeCard"
 
 const MainScreen = () => {
   const { loading, data, error } = useFetch(Config.API_MAIN_URL);
+
+
+  const renderProduct = ({ item }) => (
+    <EpisodeCard item={item}  />
+  );
 
   if (loading) {
     return <ActivityIndicator size="large" />;
@@ -14,7 +20,7 @@ const MainScreen = () => {
   }
   return (
     <SafeAreaView>
-      <Text>{Config.API_MAIN_URL}</Text>
+      <FlatList keyExtractor={item => item.id} data={data.results} renderItem={renderProduct} />
     </SafeAreaView>
   );
 };
