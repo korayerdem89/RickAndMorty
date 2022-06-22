@@ -10,16 +10,17 @@ export default StyleSheet.create({
     flexDirection: "column",
     alignItems:"center",
     justifyContent: 'center',
-  },
-  element: {
-    flexDirection: "row",
-
-  },
-  type: {
-    marginHorizontal: 5,
+    padding:4
   },
   name: {
  fontWeight:"bold",
- fontSize:20
+ fontSize:deviceSize.width / 22,
   },
+  seasonAndEpisode: {
+    flexDirection:"row"
+  },
+  airDate:{
+    fontStyle:"italic",
+    fontSize: 13
+  }
 });
