@@ -1,5 +1,5 @@
-import {API_URL} from "@env"
+import {API_MAIN_URL} from "@env"
 
 export default {
-    API_URL,
+    API_MAIN_URL,
 };
