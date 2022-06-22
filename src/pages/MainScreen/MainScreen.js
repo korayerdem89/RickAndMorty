@@ -1,32 +1,20 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { SafeAreaView, Text, FlatList, ActivityIndicator } from "react-native";
 import Config from "../../../config";
-import axios from "axios";
+import useFetch from "../../hooks/useFetch/useFetch";
 
 const MainScreen = () => {
-    const [loading, setLoading] = useState(true);
-    const [data, setData] = useState([]);
-    const [error, setError] = useState(null);
+  const { loading, data, error } = useFetch(Config.API_MAIN_URL);
 
-    const fetchData = async () => {
-      try {
-        const { data: responseData } = await axios.get(Config.API_MAIN_URL);
-        setData(responseData);
-        setLoading(false);
-        console.log(data);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-  
-    useEffect(() => {
-      fetchData();
-    }, []);
-
+  if (loading) {
+    return <ActivityIndicator size="large" />;
+  }
+  if (error) {
+    return <Text>{error}</Text>;
+  }
   return (
     <SafeAreaView>
-      <Text>{Config.API_URL}</Text>
+      <Text>{Config.API_MAIN_URL}</Text>
     </SafeAreaView>
   );
 };
