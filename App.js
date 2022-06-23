@@ -16,7 +16,7 @@ const App = () => {
           name="MainScreen"
           component={MainScreen}
           options={{
-            title: "Rick And Morty",
+            title: "EPISODES",
             headerStyle: { backgroundColor: "white" },
             headerTitleStyle: { color: COLORS.secondary },
             headerTintColor:COLORS.secondary
@@ -24,7 +24,7 @@ const App = () => {
         />
          <Stack.Screen
           options={{
-            title: "Character Page",
+            title: "Character List",
             headerStyle: { backgroundColor:"white"},
             headerTitleStyle: { color: COLORS.secondary },
             headerTintColor:COLORS.secondary
@@ -34,7 +34,7 @@ const App = () => {
         />  
         <Stack.Screen
           options={{
-            title: "Character",
+            title: "Character Info",
             headerStyle: { backgroundColor: "white"},
             headerTitleStyle: { color: COLORS.secondary },
             headerTintColor:COLORS.secondary
