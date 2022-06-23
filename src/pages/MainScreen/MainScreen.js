@@ -33,7 +33,6 @@ const MainScreen = ({ navigation }) => {
         style={styles.headerImage}
         source={require("../../../assets/rickAndMorty.png")}
       />
-      <Text style={styles.header}>EPISODES</Text>
       <FlatList
         keyExtractor={(item) => item.id}
         data={data.results}

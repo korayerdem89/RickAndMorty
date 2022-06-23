@@ -3,9 +3,8 @@ import COLORS from "../../assets/colors";
 const deviceSize = Dimensions.get("window");
 export default StyleSheet.create({
   container: {
-    backgroundColor:"white",
+    backgroundColor:COLORS.secondary,
     borderColor:"#bdbdbd",
-    borderWidth:1,
     flex:1
   },
   headerImage:{
@@ -23,5 +22,6 @@ export default StyleSheet.create({
     marginVertical:10,
   },
   flatList:{
+    marginTop:10
   }
 });

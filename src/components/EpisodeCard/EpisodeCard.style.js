@@ -3,7 +3,7 @@ const deviceSize = Dimensions.get("window");
 import COLORS from "../../assets/colors";
 export default StyleSheet.create({
   container: {
-    backgroundColor: COLORS.primarysoft,
+    backgroundColor: COLORS.primary,
     margin: 5,
     flexDirection: "row",
     borderRadius: 5,
@@ -13,6 +13,7 @@ export default StyleSheet.create({
     padding:4,
   },
   name: {
+    color:"white",
  fontWeight:"bold",
  fontSize:deviceSize.width / 22,
   },
