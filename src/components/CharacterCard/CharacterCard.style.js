@@ -26,5 +26,15 @@ export default StyleSheet.create({
   },
   species: {
     fontSize: deviceSize.width / 33,
+    color:COLORS.primary,
   },
+  location:{
+    flexDirection:"row",
+    alignItems:"center"
+  },
+  locationName:{
+    fontSize:deviceSize.width / 40,
+    fontStyle:"italic"
+  },
+
 });
