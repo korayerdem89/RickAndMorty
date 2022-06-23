@@ -2,7 +2,12 @@ import React from "react";
 import { View, Text, TouchableWithoutFeedback, Image } from "react-native";
 import styles from "./CharacterCard.style";
 
-const CharacterCard = ({ item, onSelect }) => {
+//   const filteredResults = results.filter((link) =>
+//   link.episode.includes(`https://rickandmortyapi.com/api/episode/${id}`)
+// );
+const CharacterCard = ({ item, onSelect, value }) => {
+  const id = value;
+  if (item.episode.includes(`https://rickandmortyapi.com/api/episode/${id}`)) {
   return (
     <TouchableWithoutFeedback onPress={onSelect}>
       <View style={styles.container}>
@@ -12,6 +17,7 @@ const CharacterCard = ({ item, onSelect }) => {
       </View>
     </TouchableWithoutFeedback>
   );
+  } else { return null}
 };
 
 export default CharacterCard;

@@ -17,16 +17,13 @@ const Episode = ({ navigation, route }) => {
 
   const results = data.results;
 
-  const filteredResults = results.filter((link) =>
-  link.episode.includes(`https://rickandmortyapi.com/api/episode/${id}`)
-);
 
   const handleEpisodeSelect = id => {
     navigation.navigate("Character", {id});
   };
 
   const renderEpisode = ({ item }) => (
-    <CharacterCard item={item} onSelect={() => handleEpisodeSelect(item.id)} />
+    <CharacterCard value={id} item={item} onSelect={() => handleEpisodeSelect(item.id)} />
   );
 
   if (loading) {
@@ -42,7 +39,7 @@ const Episode = ({ navigation, route }) => {
       <FlatList
         keyExtractor={(item) => item.id}
         numColumns={2}
-        data={filteredResults}
+        data={results}
         renderItem={renderEpisode}
         style={styles.flatList}
       />

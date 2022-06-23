@@ -24,7 +24,7 @@ const App = () => {
         />
          <Stack.Screen
           options={{
-            title: "Episode",
+            title: "Character Page",
             headerStyle: { backgroundColor: COLORS.primary},
             headerTitleStyle: { color: "white" },
             headerTintColor:"white"
