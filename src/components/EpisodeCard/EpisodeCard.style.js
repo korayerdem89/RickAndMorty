@@ -3,14 +3,14 @@ const deviceSize = Dimensions.get("window");
 import COLORS from "../../assets/colors";
 export default StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: COLORS.primarysoft,
     margin: 5,
     flexDirection: "row",
     borderRadius: 5,
     flexDirection: "column",
     alignItems:"center",
     justifyContent: 'center',
-    padding:4
+    padding:4,
   },
   name: {
  fontWeight:"bold",

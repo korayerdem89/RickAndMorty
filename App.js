@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import MainScreen from "./src/pages/MainScreen";
 import COLORS from "./src/assets/colors";
 import Episode from "./src/pages/Episode";
-// import Character from "./src/pages/Character";
+import Character from "./src/pages/Character";
 
 const Stack = createStackNavigator();
 
@@ -25,14 +25,14 @@ const App = () => {
          <Stack.Screen
           options={{
             title: "Episode",
-            headerStyle: { backgroundColor: "#64b5f6" },
+            headerStyle: { backgroundColor: COLORS.primary},
             headerTitleStyle: { color: "white" },
             headerTintColor:"white"
           }}
           name="Episode"
           component={Episode}
         />  
-        {/* <Stack.Screen
+        <Stack.Screen
           options={{
             title: "Character",
             headerStyle: { backgroundColor: "#64b5f6" },
@@ -41,7 +41,7 @@ const App = () => {
           }}
           name="Character"
           component={Character}
-        /> */}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

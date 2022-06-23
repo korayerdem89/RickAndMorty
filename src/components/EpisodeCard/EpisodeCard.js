@@ -3,9 +3,9 @@ import { View, Text, TouchableWithoutFeedback } from "react-native";
 import styles from "./EpisodeCard.style";
 
 const EpisodeCard = ({ item, onSelect }) => {
-  const seasonAndEpisode = item.episode;
-  const season = seasonAndEpisode.toString().slice(2, 3);
-  const episode = seasonAndEpisode.toString().slice(4, 6);
+  const episodeData = item.episode;
+  const season = episodeData.toString().slice(2, 3);
+  const episode = episodeData.toString().slice(4, 6);
   
 
   return (

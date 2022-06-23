@@ -3,24 +3,28 @@ const deviceSize = Dimensions.get("window");
 import COLORS from "../../assets/colors";
 export default StyleSheet.create({
   container: {
-    backgroundColor: COLORS.primarysoft,
+    backgroundColor: "white",
     margin: 5,
     flexDirection: "row",
     borderRadius: 5,
     flexDirection: "column",
-    alignItems:"center",
-    justifyContent: 'center',
-    padding:4
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 4,
+    width: deviceSize.width / 2.2,
+  },
+  image: {
+    width: deviceSize.width / 2.5,
+    resizeMode: "contain",
+    height: 100,
+    borderRadius: 10,
   },
   name: {
- fontWeight:"bold",
- fontSize:deviceSize.width / 22,
+    fontWeight: "bold",
+    fontSize: deviceSize.width / 27,
+    color: COLORS.secondary,
   },
-  seasonAndEpisode: {
-    flexDirection:"row"
+  species: {
+    fontSize: deviceSize.width / 33,
   },
-  airDate:{
-    fontStyle:"italic",
-    fontSize: 13
-  }
 });
