@@ -18,12 +18,8 @@ const Episode = ({ navigation, route }) => {
   const results = data.results;
 
 
-  const handleEpisodeSelect = id => {
-    navigation.navigate("Character", {id});
-  };
-
   const renderEpisode = ({ item }) => (
-    <CharacterCard value={id} item={item} onSelect={() => handleEpisodeSelect(item.id)} />
+    <CharacterCard value={id} item={item} />
   );
 
   if (loading) {
@@ -38,7 +34,7 @@ const Episode = ({ navigation, route }) => {
       <Text style={styles.seasonHeader}>Characters on Episode {id}</Text>
       <FlatList
         keyExtractor={(item) => item.id}
-        numColumns={2}
+        numColumns ={2}
         data={results}
         renderItem={renderEpisode}
         style={styles.flatList}

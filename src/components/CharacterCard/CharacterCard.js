@@ -6,11 +6,11 @@ import COLORS from "../../assets/colors";
 //   const filteredResults = results.filter((link) =>
 //   link.episode.includes(`https://rickandmortyapi.com/api/episode/${id}`)
 // );
-const CharacterCard = ({ item, onSelect, value }) => {
+const CharacterCard = ({ item, value }) => {
   const id = value;
   if (item.episode.includes(`https://rickandmortyapi.com/api/episode/${id}`)) {
   return (
-    <TouchableWithoutFeedback onPress={onSelect}>
+    <TouchableWithoutFeedback>
       <View style={styles.container}>
       <Image style={styles.image} source={{ uri: item.image }} />
       <Text style={styles.name}>{item.name}</Text>
